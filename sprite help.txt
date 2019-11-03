@@ -1,0 +1,62 @@
+SPRITES:
+
+drag(text*); All Values Explained (*): (if you see '!!!' that means don't write num)
+    ('startX') - X Pos Sprite was before drag
+    ('startY') - Y Pos Sprite was before drag
+    ('currentX') - X Pos Sprite is currently
+    ('currentY') - Y Pos Sprite is currently
+    ('finalX') - X Pos Sprite finished
+    ('finalY') - Y Pos Sprite finished
+onDrag(function); Does Function right before sprite is dragged
+durringDrag(function); While Sprite is being dragged do function
+offDrag(function); Does Function right after sprite is dragged
+
+onmouseout(function); Do function when cursor leaves Sprite
+onmouseover(function); Do function when the mouse is over the Sprites hitbox (Goes through Sprites Z Pos);
+onmouseon(function); Do function when the mouse is over the Sprites hitbox (Only if mouse can see Sprite);
+onmousedown(function); Do function when the mouse is pressed down on the sprite
+onclick(function); Do function after the mouse clicked the Sprite
+
+hide(); Hides the Sprite
+Show(); Shows the Sprite
+
+pointTo(otherSprite); Main Sprite will rotate towards the otherSprite
+distanceTo(otherSprite); Returns the distance from Main Sprite to otherSprite
+goTo(text*,num**); All Values Explained (*,**): (if you see '!!!' that means don't write num)
+    ('cursor',!!!) - Sprite will go to the cursor
+    ('mouseX',!!!) - Sprite will go to the cursors x pos
+    ('mouseY',!!!) - Sprite will go to the cursors y pos
+    ('x',number) - Sprite will go to the number x pos
+    ('y',number) - Sprite will go to the number y pos
+    (mumber1,number2) - Sprite will go to x pos number1 and y pos number2
+    (otherSprite,!!!) - Main Sprite will go to otherSprite's x and y pos
+move(direction*,distance**); All Values Explained (*,**): (if you see !!! that means don't write num)
+    ('x',number) - Change Sprites x pos by number of pixels
+    ('y',number) - Change Sprites y pos by number of pixels
+    (number,!!!) - Sprite will move number of pixels according to Sprite's rotation
+
+delete(); Deletes this Sprite
+
+isTouching(otherSprite); Return true/false is Main Sprite is touching otherSprite
+
+setCostume(number,image); Sets the sprites costume number image to the new image 
+costume(number); Sprite switches costume to number
+costumeNumber(); Returns this Sprites current costume number
+
+rotateAs(otherSprite); Main Sprite will set it's rotation to match otherSprites rotation
+rotate(direction*,number); All Values Explained (*): (if you see '!!!' that means don't write num)
+    ('right') - Sprite will rotate right by number of pixels
+    ('left') - Sprite will rotate left by number of pixels
+rotation(text*); All Values Explained (*): (if you see '!!!' that means don't write num)
+    ('left') - Sprite will rotate in the left direction
+    ('right') - Sprite will rotate in the right direction
+    ('down') - Sprite will rotate in the down direction
+    ('up') - Sprite will rotate in the up direction
+    (number) - Sprite will set its rotation to number
+
+addSize(number); Sprites size increases by number
+setSize(number); Sprites size is set to number
+
+zIndex(number); Sprites Z pos is set to number
+
+clone(function(clone)); Sprite clones itself and does function. Clone Returns itself as first parameter
